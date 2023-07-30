@@ -4,9 +4,9 @@ metadata:
   name: grafana
 spec:
   ports:
-    - port: 30008 # The port on the Service to expose
+    - port: 30001 # The port on the Service to expose
       targetPort: 3000 # The port on the destination pod to bind to
-      nodePort: 30008 # The port the Service will listen to at the Node level
+      nodePort: 30001 # The port the Service will listen to at the Node level
       protocol: TCP 
   selector:
     app: grafana # As specified on the pod-definition
