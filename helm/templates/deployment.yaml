@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: grafana
+  name: grafana-helm
   labels:
-    app: grafana
+    app: grafana-helm
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: grafana
+      app: grafana-helm
   template:
     metadata:
       labels:
-        app: grafana
+        app: grafana-helm
     spec:
       containers:
-      - name: grafana
+      - name: grafana-helm
         image: grafana/grafana
         ports:
         - containerPort: 3000
